@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.BufferedReader;
 
+
 /**
  * <strong> Nel caso in cui i dati non possono essere presi nel API</strong>
  * 
@@ -17,6 +18,7 @@ public class LeggifileJSON {
          */
         File file = new File("twitter1.json");
         BufferedReader bufferedReader = null;
+    //    String data = " ";
 
         /**
          * try catch di lettura dei dati con bufferedReader di tipo BufferedReader
@@ -30,17 +32,14 @@ public class LeggifileJSON {
                 /**
                  * @return tutti i dati
                  */
-                System.out.println(line);
+               System.out.println(line);  
             }
-/**
- * try catch 
- */
         } catch (FileNotFoundException e) {
             System.out.println("ERROR FILE NOT FOUND !!!");
         } catch (IOException e) {
             System.out.println("ERROR NOT DATA !!!!" + file.toString());
         }
-
+      
         /**
          * try catch molto importante che ci permette di sorvegliare l'andamento della chiusura del buffer
          * NullPointerException che sarebbe importante siccome ho dichiarato buffered ad inizio con Null

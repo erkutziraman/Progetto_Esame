@@ -1,8 +1,6 @@
 [
     {
-        "created_at": "Thu May 21 10:32:26 +0000 2020",
-        "id": 1263417361446719488,
-        "id_str": "1263417361446719488",
+        "created_at": "Thu May 21 10:32:26 +0000 2020","id": 1263417361446719488,"id_str": "1263417361446719488",
         "text": "The Weather Channel using machine learning to forecast allergy hotspots.\n\nIBM's The Weather Channel is now using ma… https://t.co/hZl5uHxxIt",
         "truncated": true,
         "entities": {

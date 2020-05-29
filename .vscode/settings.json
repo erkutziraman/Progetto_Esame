@@ -1,0 +1,13 @@
+{
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "Json jar/simplejson-to-easyjson-2.2.1.jar",
+            "Json jar/easyjson-core-2.2.1.jar",
+            "Json jar/json-1.1.jar"
+        ],
+        "exclude": [
+           
+        ]
+    }
+}
