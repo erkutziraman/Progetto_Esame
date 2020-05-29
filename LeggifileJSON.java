@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 
 /**
  * <strong> Nel caso in cui i dati non possono essere presi nel API</strong>
+ * con classe LeggifileJSON
  */
 
 public class LeggifileJSON {
