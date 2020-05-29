@@ -1,4 +1,3 @@
-
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
@@ -16,7 +15,7 @@ public class LeggifileJSON {
         /**
          * lettura dei dati dal file salvato <i>twitter1.json</i>
          */
-        File file = new File("twitte.json");
+        File file = new File("twitter1.json");
         BufferedReader bufferedReader = null;
 
         /**
@@ -51,7 +50,7 @@ public class LeggifileJSON {
         try {
             bufferedReader.close();
         } catch (IOException e) {
-            System.out.println("IMPOSSIBLE TO CLOSE THE FILE !!!" + file.toString());
+            System.out.println("Impossibile chiudere il file !!!" + file.toString());
         } catch (NullPointerException e) {
             System.out.println("ERROR !!!" + file.toString());
         }

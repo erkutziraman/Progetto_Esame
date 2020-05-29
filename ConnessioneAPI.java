@@ -28,10 +28,10 @@ public class ConnessioneAPI {
                 System.out.println("Connessione riuscita");
             reader = new BufferedReader(new InputStreamReader(connessione.getInputStream()));
             while ((line = reader.readLine()) != null) {
-                data.append(line);
+                System.out.println(line);
             }
             reader.close();
-            System.out.println(data.toString()+"\n");
+            System.out.println(data.toString());
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
