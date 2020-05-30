@@ -16,15 +16,27 @@ public class ConnessioneAPI {
     BufferedReader buf;
     InputStream in;
     String url;
+    String paesi[] = { "Italy", "France", "Belgium", "Germany", "Austria", "Hungary", "Poland", "Russia", "America",
+            "Sweden", "Finland", "Turkey", "Cameroon", "Greece", "Spain", "Portugal", "England", "Iceland", "China",
+            "Poland" };
 
     /**
      * Costruttore Connessione API che prende come parametro un url
      */
-
     public ConnessioneAPI(String url) {
         data = "";
         line = "";
         this.url = url;
+        ids(this.paesi);
+    }
+
+    public void ids(String country[]) {
+        String url_paesi = "";
+        for (int i = 0; i < 19; i++) {
+            url_paesi = this.url + "?q=%23" + paesi[i] + "&count=100";
+            this.url = url_paesi;
+            dati_api();
+        }
     }
 
     /**
