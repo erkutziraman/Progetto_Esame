@@ -1,10 +1,10 @@
-
 /**
  * ConnessioneAPI
  * @author ERKUT ZIRAMAN
  */
 package Conn_Server;
 
+import Stampa.*;
 import java.net.*;
 import java.io.*;
 
@@ -16,27 +16,18 @@ public class ConnessioneAPI {
     BufferedReader buf;
     InputStream in;
     String url;
-    String paesi[] = { "Italy", "France", "Belgium", "Germany", "Austria", "Hungary", "Poland", "Russia", "America",
-            "Sweden", "Finland", "Turkey", "Cameroon", "Greece", "Spain", "Portugal", "England", "Iceland", "China",
-            "Poland" };
+    String ricerche_tweet[] = { "Italy", "France", "Belgium", "Germany", "Austria", "Hungary", "Poland", "Russia",
+            "America", "Sweden", "Finland", "Turkey", "Cameroon", "Greece", "Spain", "Portugal", "England", "Iceland",
+            "China", "Poland" };
 
     /**
      * Costruttore Connessione API che prende come parametro un url
      */
-    public ConnessioneAPI(String url) {
-        data = "";
-        line = "";
-        this.url = url;
-        ids(this.paesi);
-    }
-
-    public void ids(String country[]) {
-        String url_paesi = "";
-        for (int i = 0; i < 19; i++) {
-            url_paesi = this.url + "?q=%23" + paesi[i] + "&count=100";
-            this.url = url_paesi;
-            dati_api();
-        }
+    public ConnessioneAPI() {
+        this.data = "";
+        this.line = "";
+        this.url = "https://wd4hfxnxxa.execute-api.us-east-2.amazonaws.com/dev/api/1.1/search/twe";
+        //ids(this.ricerche_tweet);
     }
 
     /**
@@ -65,6 +56,21 @@ public class ConnessioneAPI {
             e.printStackTrace();
 
         }
+        Output stampa=new Output();
+        stampa.stampa_oggetti(data);
+        if (data == "0") {
+            LeggifileJSON file_json = new LeggifileJSON();
+            stampa.stampa_oggetti(file_json.data_file());
+        }
         return data;
     }
+
+    /*public void ids(String country[]) {
+        String url_ricerche = "";
+        for (int i = 0; i < 19; i++) {
+            url_ricerche = this.url + "?q=%23" + ricerche_tweet[i] + "&count=100";
+            this.url = url_ricerche;
+            dati_api();
+        }
+    }*/
 }

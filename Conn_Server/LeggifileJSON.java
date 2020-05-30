@@ -22,12 +22,12 @@ public class LeggifileJSON {
     BufferedReader bufferedReader;
     String line;
     String data;
-
-    public LeggifileJSON(String file) {
-        this.file = new File(file);
-        bufferedReader = null;
-        line = "";
-        data = "";
+    String api = "Conn_Server\\twitter1.json";
+    public LeggifileJSON() {
+        this.file = new File(this.api);
+        this.bufferedReader = null;
+        this.line = "";
+        this.data = "";
     }
 
     /**
