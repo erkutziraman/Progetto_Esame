@@ -6,7 +6,8 @@
         "Json jar/json-1.1.jar",
         "c:\\Users\\erkut\\Downloads\\jackson-core-2.11.0.jar",
         "c:\\Users\\erkut\\Downloads\\jackson-databind-2.11.0.jar",
-        "c:\\Users\\erkut\\Downloads\\jackson-annotations-2.11.0.jar"
+        "c:\\Users\\erkut\\Downloads\\jackson-annotations-2.11.0.jar",
+        "c:\\Users\\erkut\\Downloads\\json-simple-1.1.1.jar"
     ],
     "java.configuration.updateBuildConfiguration": "interactive",
 }

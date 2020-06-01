@@ -1,9 +1,11 @@
 package Main;
-import Conn_Server.*;
+import Preleva_Ids.GetId;
+
 
 public class Programma {
     public static void main(String[] args) {
-        ConnessioneAPI connessione=new ConnessioneAPI();
-        connessione.dati_api();
+        GetId connessione =new GetId();
+        connessione.Tweet_id();
     }
-}
+    }
+    

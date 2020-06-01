@@ -1,71 +1,44 @@
 /**
- * classe che prende i dati dal file JSON salvato nel caso in cui non 
- * si riesce a connettere al server
+ * Classe che prende i dati dal file JSON salvato nel caso in cui non 
+ * si riesce a connettere al server.
  * @author TOYEM RYAN
  */
 
 package Conn_Server;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.BufferedReader;
-
-/**
- * <strong> Nel caso in cui i dati non possono essere presi nel API</strong>
- * 
- */
+import java.io.*;
 
 public class LeggifileJSON {
     File file;
-    BufferedReader bufferedReader;
-    String line;
-    String data;
-    String api = "Conn_Server\\twitter1.json";
+    String api;
+
+    /**
+     * IL costruttore senza parametri.
+     */
     public LeggifileJSON() {
-        this.file = new File(this.api);
-        this.bufferedReader = null;
-        this.line = "";
-        this.data = "";
+        api = "Conn_Server\\twitter1.json";
+        this.file = new File(api);
     }
 
     /**
-     * metodo che riceve il file Json salvato <i>file</i>
+     * Il metodo che riceve il file Json salvato.<i>file</i>
      * 
-     * @return una Stringa in formato Json
+     * @return Una Stringa in formato Json.
+     * @throws Lancia eccezione se non trova il file.
      */
     public String data_file() {
+        String line = "";
+        String data = "";
         try {
-
-            FileReader fileReader = new FileReader(file);
-            bufferedReader = new BufferedReader(fileReader);
-
-            while ((line = bufferedReader.readLine()) != null) {
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            while ((line = reader.readLine()) != null) {
                 data += line;
-
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("ERROR FILE NOT FOUND !!!");
+            reader.close();
         } catch (IOException e) {
-            System.out.println("ERROR NOT DATA !!!!" + file.toString());
-        }
-
-        /**
-         * try catch molto importante che ci permette di sorvegliare l'andamento della
-         * chiusura del buffer NullPointerException che sarebbe importante siccome ho
-         * dichiarato buffered ad inizio con Null escludendo una possibile errore con
-         * relativo alla chiusura del buffered
-         */
-
-        try {
-            bufferedReader.close();
-        } catch (IOException e) {
-            System.out.println("Impossibile chiudere il file !!!" + file.toString());
-        } catch (NullPointerException e) {
-            System.out.println("ERROR !!!" + file.toString());
+            System.out.println("ERRORE di I/O");
+            System.out.println(e);
         }
         return data;
-
     }
 }
