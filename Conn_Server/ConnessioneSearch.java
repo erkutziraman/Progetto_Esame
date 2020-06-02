@@ -1,27 +1,23 @@
-/*package Conn_Server;
 
-import Preleva_Ids.GetId;
+package Conn_Server;
+import java.net.*;
+import java.io.*;
 
-public class ConnessioneSearch {
-    String ricerche_tweet[] = { "Italy", "France", "Belgium", "Germany", "Austria", "Hungary", "Poland", "Russia",
-            "America", "Sweden", "Finland", "Turkey", "Cameroon", "Greece", "Spain", "Portugal", "England", "Iceland",
-            "China", "Poland" };
-    public void ids() {
-    String s="0";
-    ConnessioneAPI connessione= new ConnessioneAPI();
-    GetId ids= new GetId();
-    int i = 0;
-    do{
-    String url_ricerche = connessione.getUrl()+ "?q=%23" +ricerche_tweet[i]+ "&count=100";
-    connessione.setUrl(url_ricerche);
-    s=connessione.dati_api();
-    i++;
-    }while(s!="0"&&i<20);
-    if(s=="0"){
-        LeggifileJSON json=new LeggifileJSON();
-        s=json.data_file();
+ public class ConnessioneSearch {
+    URLConnection connessione;
+    String data;
+    String line;
+    String a;
+    boolean valido;
+    String url_ricerche = "";
+    int i=0;
+    InputStreamReader inR;
+    BufferedReader buf;
+    InputStream in;
+    String url;
+
+    public ConnessioneSearch() {
     }
-    ids.Tweet_id(s);
-    }
-}
-*/
+
+   
+ }
