@@ -8,77 +8,46 @@ import java.io.*;
  * 
  * @author ERKUT ZIRAMAN
  */
-public class ConnessioneAPI extends ConnessioneSearch {
-
-    String ricerche_tweet[] = { "Love", "Life", "Sunrise", "Food", "Restaurant", "Discovery", "News", "tbt", "univpm",
-            "France", "Italy", "Holland", "Tourism", "Travel", "Rome", "Portugal", "England", "Iceland", "China",
-            "Poland" };
-
+public class ConnessioneAPI{
+    URLConnection connessione;
+    String url;
+    boolean valido=false;
+    int i=0;
     public ConnessioneAPI() {
-        data = "";
-        line = "";
-        url = "https://wd4hfxnxxa.execute-api.us-east-2.amazonaws.com/dev/api/1.1/search/tweet";
+        url = "https://wd4hfxnxxa.execute-api.us-east-2.amazonaws.com/dev/api/1.1/search/tweets.json";
     }
-
-    public String dati_api() {
-        boolean validazione = false;
-        try {
-            connessione = new URL(url_ricerche).openConnection();
+    public void dati_api(String a) {
+          try{
+            connessione = new URL(a).openConnection();
             connessione.addRequestProperty("User-Agent",
                     "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.4; en-US; rv:1.9.2.2) Gecko/20100316 Firefox/3.6.2");
-            in = connessione.getInputStream();
-            inR = new InputStreamReader(in);
-            buf = new BufferedReader(inR);
-            try {
-                if (i == 19) {
-                    while ((line = buf.readLine()) != null) {
-                        this.data += line;
-                    }
-                } else {
-                    while ((line = buf.readLine()) != null) {
-                        this.data += line + ",";
-                    }
-                }
-            } finally {
-                in.close();
-            }
+                    
         } catch (IOException e) {
-            validazione = true;
-            valido = validazione;
             e.printStackTrace();
-
         }
-        return data;
     }
 
-    /**
-     * Costruisce il file Json che contiene tutti i tweet.
-     * 
-     * @return Una stringa che contiene tutti i tweet.
-     */
-    public String ids() {
-        String s = "";
-        for (i = 0; i < 20 && valido != true; i++) {
-            this.url_ricerche = url + "?q=%23" + ricerche_tweet[i] + "&count=100";
-            s = dati_api();
-        }
-        if (i == 20)
-            s = "[" + s + "]";
-        // System.out.println(s);
-        if (valido == true) {
-            LeggifileJSON file_json = new LeggifileJSON();
-            s = "";
-            s = file_json.data_file();
-        }
-        try {
-            File file = new File("Conn_Server\\twitter1.json");
-            BufferedWriter output = new BufferedWriter(new FileWriter(file));
-            output.write(s);
-            output.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public URLConnection getConnessione() {
+        return connessione;
+    }
 
-        return s;
+    public void setConnessione(URLConnection connessione) {
+        this.connessione = connessione;
+    }
+
+    public boolean isValido() {
+        return valido;
+    }
+
+    public void setValido(boolean valido) {
+        this.valido = valido;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

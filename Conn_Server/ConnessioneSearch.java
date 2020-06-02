@@ -1,23 +1,21 @@
-
 package Conn_Server;
-import java.net.*;
-import java.io.*;
+ public class ConnessioneSearch extends ConnessioneAPI {
+   String ricerche_tweet[]={"Love", "Life", "Sunrise", "Food", "Restaurant", "Discovery", "News", "tbt", "univpm",
+   "France", "Italy", "Holland", "Tourism", "Travel", "Rome", "Portugal", "England", "Iceland", "China",
+   "Poland" };
+ public void Ids(String s) {
+    dati_api(s);
+}
 
- public class ConnessioneSearch {
-    URLConnection connessione;
-    String data;
-    String line;
-    String a;
-    boolean valido;
-    String url_ricerche = "";
-    int i=0;
-    InputStreamReader inR;
-    BufferedReader buf;
-    InputStream in;
-    String url;
+public String[] getRicerche_tweet() {
+  return ricerche_tweet;
+}
 
-    public ConnessioneSearch() {
-    }
+public void setRicerche_tweet(String[] ricerche_tweet) {
+  this.ricerche_tweet = ricerche_tweet;
+}
+
+}
 
    
- }
+ 

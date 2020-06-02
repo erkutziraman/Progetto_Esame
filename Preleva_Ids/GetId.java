@@ -9,12 +9,13 @@ package Preleva_Ids;
 import java.util.Vector;
 import org.json.simple.parser.*;
 import Conn_Server.ConnessioneAPI;
+import Lettura.*;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONArray;
 
 public class GetId {
 
-    protected ConnessioneAPI bb = new ConnessioneAPI();
+    protected LeggiAPIStringa bb = new LeggiAPIStringa();
     protected Vector<String> mtr = new Vector<String>();
     protected JSONParser parser = new JSONParser();
     protected JSONArray obj = null;
@@ -24,7 +25,7 @@ public class GetId {
     public Vector<String> Tweet_id() {
 
         try {
-            obj = (JSONArray) parser.parse(bb.ids());
+            obj = (JSONArray) parser.parse(bb.leggi());
         } catch (Exception e) {
             System.out.println("probem de parsing");
             e.printStackTrace();

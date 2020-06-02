@@ -1,14 +1,6 @@
 {
     "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "Json jar/simplejson-to-easyjson-2.2.1.jar",
-        "Json jar/easyjson-core-2.2.1.jar",
-        "Json jar/json-1.1.jar",
-        "c:\\Users\\erkut\\Downloads\\jackson-core-2.11.0.jar",
-        "c:\\Users\\erkut\\Downloads\\jackson-databind-2.11.0.jar",
-        "c:\\Users\\erkut\\Downloads\\jackson-annotations-2.11.0.jar",
         "c:\\Users\\erkut\\Downloads\\json-simple-1.1.1.jar",
-        "c:\\Users\\HP\\Downloads\\json-simple-1.1.1.jar"
     ],
     "java.configuration.updateBuildConfiguration": "interactive",
 }
