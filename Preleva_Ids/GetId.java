@@ -14,14 +14,6 @@ import org.json.simple.JSONArray;
 
 public class GetId {
 
-<<<<<<< HEAD
-    ConnessioneAPI bb = new ConnessioneAPI();
-    Vector<String> mtr = new Vector<String>();
-    JSONArray obj = null;
-    JSONParser parser = new JSONParser();
-
-    public Vector<String> Tweet_id() {
-=======
     protected ConnessioneAPI bb = new ConnessioneAPI();
     protected Vector<String> mtr = new Vector<String>();
     protected JSONParser parser = new JSONParser();
@@ -31,19 +23,12 @@ public class GetId {
 
     public Vector<String> Tweet_id() {
 
->>>>>>> bfb049129f8b1c20bfcca3467de1bf5d69c36a89
         try {
             obj = (JSONArray) parser.parse(bb.ids());
         } catch (Exception e) {
             System.out.println("probem de parsing");
             e.printStackTrace();
         }
-<<<<<<< HEAD
-        JSONObject secondo = null;
-        JSONArray jsonarr_1 = null;
-=======
-
->>>>>>> bfb049129f8b1c20bfcca3467de1bf5d69c36a89
         for (int i = 0; i < obj.size(); i++) {
             secondo = (JSONObject) obj.get(i);
             try {
@@ -54,11 +39,7 @@ public class GetId {
             }
             /**
              * <strong> Ciclo For che fa la verifica di place costruisce il vettore mtr
-<<<<<<< HEAD
-             * verificando se ci sono gia gli id dentro mtr.
-=======
              * verificando se ci sono gia gli id identici dentro il vettore mtr.
->>>>>>> bfb049129f8b1c20bfcca3467de1bf5d69c36a89
              */
             for (int j = 0; j < jsonarr_1.size(); j++) {
                 JSONObject jsonobj_1 = (JSONObject) jsonarr_1.get(j);
