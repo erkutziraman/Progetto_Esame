@@ -8,7 +8,7 @@ package Preleva_Ids;
 
 import java.util.Vector;
 import org.json.simple.parser.*;
-import Conn_Server.ConnessioneAPI;
+//import Conn_Server.ConnessioneAPI;
 import Lettura.*;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONArray;

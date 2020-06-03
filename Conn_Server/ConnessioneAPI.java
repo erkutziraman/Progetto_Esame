@@ -16,6 +16,12 @@ public class ConnessioneAPI{
     public ConnessioneAPI() {
         url = "https://wd4hfxnxxa.execute-api.us-east-2.amazonaws.com/dev/api/1.1/search/tweets.json";
     }
+
+    /**
+     * classe che fa la verifica della connessione al server con
+     * @exception IO
+     * @param a
+     */
     public void dati_api(String a) {
           try{
             connessione = new URL(a).openConnection();
