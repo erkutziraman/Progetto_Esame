@@ -50,8 +50,7 @@ public class LeggiAPIStringa extends LeggiStringa {
     }
     if(connessione.isValido()==true){
         LeggifileJSON lettura_file=new LeggifileJSON();
-        lettura_file.data_file();
-        a=lettura_file.string_letta();
+       a = lettura_file.data_file();
     }
     try {
         File file=new File("Conn_Server\\twitter1.json");
