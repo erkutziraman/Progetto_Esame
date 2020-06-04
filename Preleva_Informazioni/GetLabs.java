@@ -1,7 +1,6 @@
 package Preleva_Informazioni;
 
-import java.util.HashSet;
-//import java.util.Vector;
+import java.util.Vector;
 
 import org.json.simple.parser.*;
 import Lettura.*;
@@ -10,13 +9,13 @@ import org.json.simple.JSONArray;
 
 public class GetLabs {
     protected LeggiLabs Labs = new LeggiLabs();
-    protected HashSet<Tweet> tweet = new HashSet<Tweet>();
+    protected Vector<Tweet> tweet = new Vector<Tweet>();
     protected JSONParser parser = new JSONParser();
     protected JSONObject obj = null;
     protected JSONArray data = null;
     protected JSONObject includes = null;
 
-    public HashSet<Tweet> Labs2() {
+    public Vector<Tweet> Labs2() {
 
         try {
             obj = (JSONObject) parser.parse(Labs.LetturaLabs());
