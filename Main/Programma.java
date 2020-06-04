@@ -1,11 +1,10 @@
 package Main;
-import Preleva_Ids.GetId;
+import Preleva_Informazioni.GetLabs;
 
 
 public class Programma {
     public static void main(String[] args) {
-        GetId connessione =new GetId();
-        connessione.Tweet_id();
+        GetLabs letturaesempio=new GetLabs();
+        letturaesempio.Labs2();
     }
     }
-    

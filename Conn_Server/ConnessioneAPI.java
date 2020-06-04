@@ -10,11 +10,13 @@ import java.io.*;
  */
 public class ConnessioneAPI{
     URLConnection connessione;
-    String url;
+    protected String url;
+    protected String url_2;
     boolean valido=false;
     int i=0;
     public ConnessioneAPI() {
         url = "https://wd4hfxnxxa.execute-api.us-east-2.amazonaws.com/dev/api/1.1/search/tweets.json";
+        url_2="https://wd4hfxnxxa.execute-api.us-east-2.amazonaws.com/dev/api/labs/2/tweets?ids=";
     }
 
     /**
@@ -56,4 +58,15 @@ public class ConnessioneAPI{
     public void setUrl(String url) {
         this.url = url;
     }
+
+	public String getUrl_2() {
+		return url_2;
+	}
+
+	public void setUrl_2(String url_2) {
+		this.url_2 = url_2;
+	}
 }
+
+
+//&expansions=geo.place_id&place.fields=country,geo&tweet.fields=created_at

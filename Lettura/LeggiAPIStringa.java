@@ -3,9 +3,6 @@
  * gestendo il fatto che se non c'è connessione andiamo a prendere gli informazioni sul file salvato
  */
 package Lettura;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.*;
 
 import Conn_Server.ConnessioneSearch;
@@ -54,8 +51,8 @@ public class LeggiAPIStringa extends LeggiStringa {
     }
     try {
         File file=new File("Conn_Server\\twitter1.json");
-        BufferedWriter output=new BufferedWriter(new FileWriter(file));
-        output.write(a);
+        PrintWriter output=new PrintWriter(new BufferedWriter(new FileWriter(file)));
+        output.println(a);
         output.close();
     } catch (IOException e) {
         e.printStackTrace();
