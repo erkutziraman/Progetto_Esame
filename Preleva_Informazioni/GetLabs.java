@@ -10,6 +10,7 @@ import org.json.simple.JSONArray;
 public class GetLabs {
     protected LeggiLabs Labs = new LeggiLabs();
     protected Vector<Tweet> tweet = new Vector<Tweet>();
+    protected Vector<TweetIncludes> tweetincludes = new Vector<TweetIncludes>();
     protected JSONParser parser = new JSONParser();
     protected JSONObject obj = null;
     protected JSONArray data = null;
@@ -24,34 +25,37 @@ public class GetLabs {
             e.printStackTrace();
         }
         data = (JSONArray) obj.get("data");
-        includes=(JSONObject) obj.get("includes");
-        JSONArray places=(JSONArray) includes.get("places");
-        for (int i = 0; i < data.size(); i++) {
-            try {
-                JSONObject data_value=(JSONObject)data.get(i);
-                JSONObject places_value=(JSONObject)places.get(i);
-               // JSONObject created_at=(JSONObject)data_value.get("created_at");
-               String created_at=(String.valueOf(data_value.get("created_at")));
-              //  JSONObject id=//(JSONObject)data_value.get("id");
-                String id=(String.valueOf(data_value.get("id")));
-              //  JSONObject text=(JSONObject)data_value.get("text");
-              String text=(String.valueOf(data_value.get("text")));
-               // JSONObject country=(JSONObject)places_value.get("country");
-               String country=(String.valueOf(places_value.get("country")));
-               // JSONObject location=(JSONObject)places_value.get("full_name");
-               String location=(String.valueOf(places_value.get("full_name")));
-               // JSONObject place_id=(JSONObject)places_value.get("id");
-                String place_id=(String.valueOf(places_value.get("id")));
-                Tweet tweet_lab = new Tweet(created_at,id,text,country,location,place_id);
-                tweet.add(tweet_lab);
-            } catch (Exception e) {
-                System.out.println("L'objet n'est pas trouver");
-
-            }
-        }
-        System.out.println("voir la classe VEttore " + tweet);
-        System.out.println("la dimension de l'array est " + tweet.size());
-        return tweet;
-     }
+        includes = (JSONObject) obj.get("includes");
+        JSONArray places = (JSONArray) includes.get("places");
         
+            try {
+                for (int i = 0; i < data.size(); i++) {
+                JSONObject data_value = (JSONObject) data.get(i);
+                JSONObject geo = (JSONObject) data_value.get("geo");
+                String created_at = (String.valueOf(data_value.get("created_at")));
+                String text = (String.valueOf(data_value.get("text")));
+                String place_id = (String.valueOf(geo.get("place_id")));
+                Tweet tweet_lab = new Tweet(created_at,text,place_id);
+                tweet.add(tweet_lab);
+                }
+                for(int j=0;j<places.size();j++){
+                    JSONObject places_value = (JSONObject) places.get(j);
+                    String country = (String.valueOf(places_value.get("country")));
+                    String location = (String.valueOf(places_value.get("full_name")));
+                    String id = (String.valueOf(places_value.get("id")));
+                    TweetIncludes tweet_lab_includes =new TweetIncludes(country, id, location);
+                    tweetincludes.add(tweet_lab_includes);
+    
+                } 
+                }catch (Exception e) {
+                System.out.println("L'objet n'est pas trouver");
+            }
+        System.out.print("voir la classe VEttore " + tweet);
+        System.out.print("voir la classe VEttore " + tweetincludes);
+        System.out.println("la dimension de l'array est " + tweet.size());
+        System.out.println("la dimension de l'array est " + tweetincludes.size());
+
+        return tweet;
     }
+
+}
