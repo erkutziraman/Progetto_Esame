@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Programma<op_progetto>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "progetto_2019_2020.op_progetto.Programma",
+            "projectName": "op_progetto",
+            "args": ""
+        }
+    ]
+}
