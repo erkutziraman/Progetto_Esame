@@ -37,7 +37,16 @@ public class metadata {
             TweetMetadata Metadata = new TweetMetadata(created_at, text, place_id, country, location);
             tweetmetadata.add(Metadata);
         }
+        
         return tweetmetadata;
+    }
+
+    public Vector<TweetMetadata> getTweetmetadata() {
+        return tweetmetadata;
+    }
+
+    public void setTweetmetadata(Vector<TweetMetadata> tweetmetadata) {
+        this.tweetmetadata = tweetmetadata;
     }
 
 }

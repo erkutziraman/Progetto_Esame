@@ -6,6 +6,7 @@ public class TweetMetadata {
     String place_id;
     String country;
     String location;
+    public TweetMetadata(){}
     public TweetMetadata(String created_at, String text, String place_id, String country, String location) {
         this.created_at = created_at;
         this.text = text;

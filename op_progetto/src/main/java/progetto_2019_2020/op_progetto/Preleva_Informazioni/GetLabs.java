@@ -66,4 +66,12 @@ public class GetLabs {
         this.tweetincludes = tweetincludes;
     }
 
+    public Vector<Tweet> getTweet() {
+        return tweet;
+    }
+
+    public void setTweet(Vector<Tweet> tweet) {
+        this.tweet = tweet;
+    }
+
 }
