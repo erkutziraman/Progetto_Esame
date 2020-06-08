@@ -50,7 +50,7 @@ public class LeggiAPIStringa extends LeggiStringa {
        a = lettura_file.data_file();
     }
     try {
-        File file=new File("src\\main\\java\\progetto_2019_2020\\op_progetto\\Conn_Server\\twitter1.json");
+        File file=new File("C:\\Users\\erkut\\Desktop\\Progetto\\op_progetto\\src\\main\\java\\progetto_2019_2020\\op_progetto\\Conn_Server\\twitter1.json");
         PrintWriter output=new PrintWriter(new BufferedWriter(new FileWriter(file)));
         output.println(a);
         output.close();

@@ -34,7 +34,7 @@ public class LeggiLabs extends LeggiStringa {
             e.printStackTrace();
         }
     
-    File file=new File("src\\main\\java\\progetto_2019_2020\\op_progetto\\Conn_Server\\twitter2.json");
+    File file=new File("C:\\Users\\erkut\\Desktop\\Progetto\\op_progetto\\src\\main\\java\\progetto_2019_2020\\op_progetto\\Conn_Server\\twitter2.json");
     try{
         PrintWriter output=new PrintWriter(new BufferedWriter(new FileWriter(file)));
         output.println(a);

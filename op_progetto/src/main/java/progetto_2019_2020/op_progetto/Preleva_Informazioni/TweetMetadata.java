@@ -1,20 +1,19 @@
 package progetto_2019_2020.op_progetto.Preleva_Informazioni;
 
-public class Tweet {
+public class TweetMetadata {
     String created_at;
     String text;
     String place_id;
-
-    public Tweet(String created_at, String text, String place_id) {
+    String country;
+    String location;
+    public TweetMetadata(String created_at, String text, String place_id, String country, String location) {
         this.created_at = created_at;
         this.text = text;
         this.place_id = place_id;
+        this.country = country;
+        this.location = location;
     }
-    public Tweet(){}
-    @Override
-    public String toString() {
-        return "Created_at: "+created_at +", Text: "+text+", Place_id: "+place_id ;
-    }
+  //  public TweetMetadata(){}
 
     public String getCreated_at() {
         return created_at;
@@ -23,7 +22,6 @@ public class Tweet {
     public void setCreated_at(String created_at) {
         this.created_at = created_at;
     }
-
     public String getText() {
         return text;
     }
@@ -39,5 +37,21 @@ public class Tweet {
     public void setPlace_id(String place_id) {
         this.place_id = place_id;
     }
-   
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+    
 }

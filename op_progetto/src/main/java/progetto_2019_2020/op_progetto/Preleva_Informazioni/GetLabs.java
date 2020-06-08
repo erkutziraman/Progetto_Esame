@@ -58,4 +58,12 @@ public class GetLabs {
         return tweet;
     }
 
+    public Vector<TweetIncludes> getTweetincludes() {
+        return tweetincludes;
+    }
+
+    public void setTweetincludes(Vector<TweetIncludes> tweetincludes) {
+        this.tweetincludes = tweetincludes;
+    }
+
 }

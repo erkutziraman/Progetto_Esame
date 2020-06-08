@@ -49,8 +49,8 @@ public class GetId {
                 }
             }
         }
-        System.out.println("voir la classe VEttore " + mtr);
-        System.out.println("la dimension de l'array est " + mtr.size());
+        //System.out.println("voir la classe VEttore " + mtr);
+        //System.out.println("la dimension de l'array est " + mtr.size());
         return mtr;
     }
 }

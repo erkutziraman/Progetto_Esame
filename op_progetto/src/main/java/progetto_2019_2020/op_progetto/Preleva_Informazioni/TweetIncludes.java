@@ -9,8 +9,33 @@ public class TweetIncludes {
         this.id = id;
         this.location = location;
     }
+    public TweetIncludes(){}
     @Override
     public String toString() {
         return "Country: "+country +", Id: "+id+", Location: "+location ;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 }
