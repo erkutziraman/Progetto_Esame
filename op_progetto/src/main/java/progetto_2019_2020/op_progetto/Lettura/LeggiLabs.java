@@ -13,7 +13,7 @@ public class LeggiLabs extends LeggiStringa {
     HashSet <String> mtr2 =new HashSet<String>();
     ConnessioneIds connessione=new ConnessioneIds();
     String a="";
-    public String LetturaLabs(){
+    public /*String*/void LetturaLabs(){
         GetId IdsSearch=new GetId();
         mtr2 = IdsSearch.Tweet_id();
         Iterator <String> iter = mtr2.iterator();
@@ -43,7 +43,7 @@ public class LeggiLabs extends LeggiStringa {
         e.printStackTrace();
     }
    // System.out.println(a);
-    return a;
+    //return a;
     
 
 }

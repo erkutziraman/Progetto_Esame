@@ -12,13 +12,9 @@ public class metadata {
     GetLabs lab = new GetLabs();
     Vector<Tweet> str;
     Vector<TweetIncludes> str2;
-
-    public metadata() {
-        this.str = lab.Labs2();
-        this.str2 = lab.getTweetincludes();
-    }
-
     public Vector<TweetMetadata> leggimetadata() {
+        this.str=lab.Labs2();
+        this.str2 = lab.getTweetincludes();
         String created_at = "";
         String text = "";
         String place_id = "";
@@ -35,9 +31,8 @@ public class metadata {
                 }
             }
             TweetMetadata Metadata = new TweetMetadata(created_at, text, place_id, country, location);
-            tweetmetadata.add(Metadata);
+            this.tweetmetadata.add(Metadata);
         }
-        
         return tweetmetadata;
     }
 
@@ -48,5 +43,14 @@ public class metadata {
     public void setTweetmetadata(Vector<TweetMetadata> tweetmetadata) {
         this.tweetmetadata = tweetmetadata;
     }
+
+    public Vector<Tweet> getStr() {
+        return str;
+    }
+
+    public void setStr(Vector<Tweet> str) {
+        this.str = str;
+    }
+
 
 }

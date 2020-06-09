@@ -12,7 +12,7 @@ public class LeggifileJSON extends LeggiStringa {
     String api;
 
     public LeggifileJSON() {
-        api = "Conn_Server\\twitter1.json";
+        api = "C:\\Users\\erkut\\Desktop\\Progetto\\op_progetto\\src\\main\\java\\progetto_2019_2020\\op_progetto\\Conn_Server\\twitter1.json";
         file = new File(api);
     }
     public String data_file() {

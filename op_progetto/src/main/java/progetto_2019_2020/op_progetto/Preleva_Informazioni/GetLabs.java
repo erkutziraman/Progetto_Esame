@@ -1,5 +1,7 @@
 package progetto_2019_2020.op_progetto.Preleva_Informazioni;
 
+import java.io.File;
+import java.io.FileReader;
 import java.util.Vector;
 
 import org.json.simple.parser.*;
@@ -10,16 +12,16 @@ import org.json.simple.JSONArray;
 public class GetLabs {
     protected LeggiLabs Labs = new LeggiLabs();
     protected Vector<Tweet> tweet = new Vector<Tweet>();
-    protected Vector<TweetIncludes> tweetincludes = new Vector<TweetIncludes>();
+    public Vector<TweetIncludes> tweetincludes = new Vector<TweetIncludes>();
     protected JSONParser parser = new JSONParser();
     protected JSONObject obj = null;
     protected JSONArray data = null;
     protected JSONObject includes = null;
-
+    File file=new File("C:\\Users\\erkut\\Desktop\\Progetto\\op_progetto\\src\\main\\java\\progetto_2019_2020\\op_progetto\\Conn_Server\\twitter2.json");
     public Vector<Tweet> Labs2() {
 
         try {
-            obj = (JSONObject) parser.parse(Labs.LetturaLabs());
+            obj = (JSONObject) parser.parse(/*Labs.LetturaLabs()*/new FileReader(file));
         } catch (Exception e) {
             System.out.println("probem de parsing");
             e.printStackTrace();
