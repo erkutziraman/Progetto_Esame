@@ -7,6 +7,7 @@ import java.io.*;
 
 import progetto_2019_2020.op_progetto.Conn_Server.ConnessioneSearch;
 
+
 public class LeggiAPIStringa extends LeggiStringa {
     String a="";
     String url="";
@@ -23,7 +24,7 @@ public class LeggiAPIStringa extends LeggiStringa {
 
         for (i=0; i < 20 && connessione.isValido() != true; i++) {
             try{
-            url = connessione.getUrl()+ "?q=%23" + connessione.getRicerche_tweet()[i] + "&count=100";
+            url = connessione.getUrl()+ ".json?q=%23" + connessione.getRicerche_tweet()[i] + "&count=100";
             connessione.Ids(url);
             in = connessione.getConnessione().getInputStream();
             inR=new InputStreamReader(in);
@@ -50,7 +51,7 @@ public class LeggiAPIStringa extends LeggiStringa {
        a = lettura_file.data_file();
     }
     try {
-        File file=new File("C:\\Users\\erkut\\Desktop\\Progetto\\op_progetto\\src\\main\\java\\progetto_2019_2020\\op_progetto\\Conn_Server\\twitter1.json");
+        File file=new File("twitter1.json"); // C:\\Users\\HP\\Desktop\\progetto PO\\op_progetto\\src\\main\\java\\progetto_2019_2020\\op_progetto\\
         PrintWriter output=new PrintWriter(new BufferedWriter(new FileWriter(file)));
         output.println(a);
         output.close();

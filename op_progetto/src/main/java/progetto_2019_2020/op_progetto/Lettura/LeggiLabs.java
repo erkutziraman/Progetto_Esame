@@ -8,11 +8,16 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.*;
 import progetto_2019_2020.op_progetto.Conn_Server.ConnessioneIds;
+
+
+
 import progetto_2019_2020.op_progetto.Preleva_Informazioni.*;
 public class LeggiLabs extends LeggiStringa {
     HashSet <String> mtr2 =new HashSet<String>();
     ConnessioneIds connessione=new ConnessioneIds();
     String a="";
+
+    
     public /*String*/void LetturaLabs(){
         GetId IdsSearch=new GetId();
         mtr2 = IdsSearch.Tweet_id();
@@ -34,7 +39,7 @@ public class LeggiLabs extends LeggiStringa {
             e.printStackTrace();
         }
     
-    File file=new File("C:\\Users\\erkut\\Desktop\\Progetto\\op_progetto\\src\\main\\java\\progetto_2019_2020\\op_progetto\\Conn_Server\\twitter2.json");
+    File file=new File("twitter2.json"); // C:\\Users\\erkut\\Desktop\\Progetto\\op_progetto\\src\\main\\java\\progetto_2019_2020\\
     try{
         PrintWriter output=new PrintWriter(new BufferedWriter(new FileWriter(file)));
         output.println(a);

@@ -9,6 +9,8 @@ import progetto_2019_2020.op_progetto.Lettura.*;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONArray;
 
+
+
 public class GetLabs {
     protected LeggiLabs Labs = new LeggiLabs();
     protected Vector<Tweet> tweet = new Vector<Tweet>();
@@ -17,7 +19,7 @@ public class GetLabs {
     protected JSONObject obj = null;
     protected JSONArray data = null;
     protected JSONObject includes = null;
-    File file=new File("C:\\Users\\erkut\\Desktop\\Progetto\\op_progetto\\src\\main\\java\\progetto_2019_2020\\op_progetto\\Conn_Server\\twitter2.json");
+    File file=new File("twitter2.json");
     public Vector<Tweet> Labs2() {
 
         try {
