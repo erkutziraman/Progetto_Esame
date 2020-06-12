@@ -40,15 +40,20 @@ public class LeggiLabs extends LeggiStringa {
         }
     
     File file=new File("twitter2.json"); // C:\\Users\\erkut\\Desktop\\Progetto\\op_progetto\\src\\main\\java\\progetto_2019_2020\\
-    try{
-        PrintWriter output=new PrintWriter(new BufferedWriter(new FileWriter(file)));
-        output.println(a);
-        output.close();
-    }catch(IOException e ){
-        e.printStackTrace();
+
+
+    if( a != "" ){
+        try{
+            PrintWriter output=new PrintWriter(new BufferedWriter(new FileWriter(file)));
+            output.println(a);
+            output.close();
+        }catch(IOException e ){
+            e.printStackTrace();
+        }
+       // System.out.println(a);
+        //return a;
     }
-   // System.out.println(a);
-    //return a;
+   
     
 
 }

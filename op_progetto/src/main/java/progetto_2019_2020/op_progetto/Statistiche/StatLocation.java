@@ -5,15 +5,24 @@ import java.util.Vector;
 import progetto_2019_2020.op_progetto.Preleva_Informazioni.TweetMetadata;
 
 public class StatLocation {
-   Vector<TweetMetadata> tweet_location=new Vector<TweetMetadata>();
-    public Vector<TweetMetadata> get_tweet_location(String a,Vector<TweetMetadata> s){
-     //    metadata mt=new metadata();
+   int b;
+   String c = "";
+
+    public void get_StatFiltriLocation(String a,Vector<TweetMetadata> s){
+    int t = 0 ;
         for(int i=0;i<s.size();i++){
             if(s.get(i).getPlace_id().equals(a)){
-                TweetMetadata data= s.get(i);
-                tweet_location.add(data);
+                t++;
+              this.b=t;
             }
         }
-        return tweet_location;
     }
+
+    public Statmain risultato(){
+        String description = "Questa statistica ci restituisce il numero di tweet contenente il numero di ID selezionato" ;
+        int risultato = b;
+        Statmain statmain = new Statmain(description, risultato);
+        return statmain;
+    }
+    
 }

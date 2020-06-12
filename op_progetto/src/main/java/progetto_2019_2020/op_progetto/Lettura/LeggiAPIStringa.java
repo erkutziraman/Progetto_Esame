@@ -46,20 +46,23 @@ public class LeggiAPIStringa extends LeggiStringa {
     if (i==20){
         a="[" + a + "]";
     }
-    if(connessione.isValido()==true){
+    if(connessione.isValido()!=false){
         LeggifileJSON lettura_file=new LeggifileJSON();
-       a = lettura_file.data_file();
+        a = lettura_file.data_file();
     }
-    try {
+        if(connessione.isValido()!=true){
+         try {
         File file=new File("twitter1.json"); // C:\\Users\\HP\\Desktop\\progetto PO\\op_progetto\\src\\main\\java\\progetto_2019_2020\\op_progetto\\
         PrintWriter output=new PrintWriter(new BufferedWriter(new FileWriter(file)));
         output.println(a);
         output.close();
     } catch (IOException e) {
         e.printStackTrace();
+    }    
     }
+   
 
-    return a;
+return a;
 }
 
 /**
