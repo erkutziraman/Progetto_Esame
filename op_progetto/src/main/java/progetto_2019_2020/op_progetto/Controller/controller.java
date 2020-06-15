@@ -3,7 +3,6 @@ package progetto_2019_2020.op_progetto.Controller;
 import java.util.Vector;
 
 import org.springframework.web.bind.annotation.GetMapping;
-
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,7 +22,7 @@ public class controller {
     @GetMapping("/connessione")
     public String esempio_2() {
         new LeggiLabs().LetturaLabs();
-        return "Dati sono prelevati";
+        return "I dati sono stati prelevati";
     }
 
     @GetMapping("/metadata")
@@ -42,7 +41,7 @@ public class controller {
         return new FiltriCountry().get_tweet_Country(param2, nuovo);
     }
 
-    @GetMapping("/Ora")
+    @GetMapping("/ora")
     public Vector<TweetMetadata> example4(@RequestParam(name = "param3") String param3) {
 
         return new FiltriOra().get_tweet_time(param3, nuovo);
@@ -60,7 +59,7 @@ public class controller {
         return statcountry.risultato();
     }
 
-    @GetMapping("/statOra")
+    @GetMapping("/statora")
     public Statmain example7(@RequestParam(name = "param6") String param6) {
         statora.get_StatFiltriOra(param6, nuovo);
         return statora.risultato();
