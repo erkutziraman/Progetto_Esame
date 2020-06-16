@@ -41,7 +41,7 @@ public class LeggiAPIStringa extends LeggiStringa {
                 validazione=true;
                 connessione.setValido(validazione);
                 e.printStackTrace();
-            }  
+            }
     }
     if (i==20){
         a="[" + a + "]";

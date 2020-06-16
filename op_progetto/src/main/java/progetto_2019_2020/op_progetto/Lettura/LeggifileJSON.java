@@ -28,4 +28,12 @@ public class LeggifileJSON extends LeggiStringa {
             }
         return data;
     }
+
+    public String getApi() {
+        return api;
+    }
+
+    public void setApi(String api) {
+        this.api = api;
+    }
 }

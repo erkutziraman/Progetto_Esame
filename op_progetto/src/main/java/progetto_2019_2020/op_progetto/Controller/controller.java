@@ -26,7 +26,7 @@ public class controller {
     }
 
     @GetMapping("/metadata")
-    public Vector<TweetMetadata> example() {
+    public Vector<TweetMetadata> metadata() {
         this.nuovo = new metadata().leggimetadata();
         return nuovo;
     }
