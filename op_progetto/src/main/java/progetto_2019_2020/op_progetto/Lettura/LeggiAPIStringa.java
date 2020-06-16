@@ -24,7 +24,7 @@ public class LeggiAPIStringa extends LeggiStringa {
 
         for (i=0; i < 20 && connessione.isValido() != true; i++) {
             try{
-            url = connessione.getUrl()+ ".json?q=%23" + connessione.getRicerche_tweet()[i] + "&count=100";
+            url = connessione.getUrl()+ "?q=%23" + connessione.getRicerche_tweet()[i] + "&count=100";
             connessione.Ids(url);
             in = connessione.getConnessione().getInputStream();
             inR=new InputStreamReader(in);
