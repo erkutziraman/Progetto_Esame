@@ -15,7 +15,7 @@ La nostra applicazione permette di richiedere mediante API REST (GET) con rotte 
   
 # Istruzione d'uso
 
-Quest'applicazione è stata codificata per essere lanciata quando c'è la connessione alla rete internet **(Modalità Online)** ma anche quando non si può connettersi alla rete **(Modalità Offline)**; 
+Quest'applicazione è stata codificata per essere lanciata quando c'è la connessione alla rete internet **([Modalità Online](https://github.com/erkutziraman/Progetto_Esame#1--modalit%C3%A0-online))** ma anche quando non si può connettersi alla rete **([Modalità Offline](https://github.com/erkutziraman/Progetto_Esame#2--modalit%C3%A0-offline))**; 
 
  ### Lanciare l'applicazione
  **Compilando tutti i file è stato prodotto un file eseguibile** `.jar` 
