@@ -124,3 +124,6 @@ Questa comanda ci aiuta a prelevare i dati che sono **stati salvati** dentro il 
 la distribuzione del lavoro non è stata effettuata in modo sistematico, nella gestione dei diversi problemi che abbiamo riscontrato abbiamo usato la funzionalità della `condivizione dello schermo` più la `richiesta del controllo` disponibile su l'applicazione **Microsoft TEAMS**, quindi la distribuzione non uniforme dei commit e degli autori dei classi sarebbe dovuta al fatto che tante classi **sono state scritte da noi due**, **ei commit fatti da un computer**.
 
 > NB: sarebbe saggio specificare che con Visual Studio Code potremmo effettuare direttamente commit su github, quindi dopo una sessione di lavoro decidiamo sempre di fare il commit sul computer su cui stiamo lavorando
+
+> All'inizio del progetto il gruppo era costituito da 3 persone, purtroppo abbiamo fatto tutto il lavoro in 2. I nomi delle persone,che hanno continuato il lavoro sono quelli sopra riportati.
+
