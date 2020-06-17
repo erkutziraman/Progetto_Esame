@@ -25,7 +25,7 @@ public class controller {
     private StatOra statora = new StatOra();
 
     @GetMapping("/connessione")
-    public String esempio_2() {
+    public String connessione() {
         new LeggiLabs().LetturaLabs();
         return "I dati sono stati prelevati";
     }
@@ -37,35 +37,35 @@ public class controller {
     }
 
     @GetMapping("/location")
-    public Vector<TweetMetadata> example2(@RequestParam(name = "param") String param) {
+    public Vector<TweetMetadata> location(@RequestParam(name = "param") String param) {
         return new FiltriLocation().get_tweet_location(param, nuovo);
     }
 
     @GetMapping("/country")
-    public Vector<TweetMetadata> example3(@RequestParam(name = "param") String param) {
+    public Vector<TweetMetadata> country(@RequestParam(name = "param") String param) {
         return new FiltriCountry().get_tweet_Country(param, nuovo);
     }
 
     @GetMapping("/ora")
-    public Vector<TweetMetadata> example4(@RequestParam(name = "param") String param) {
+    public Vector<TweetMetadata> ora(@RequestParam(name = "param") String param) {
 
         return new FiltriOra().get_tweet_time(param, nuovo);
     }
 
     @GetMapping("/statlocation")
-    public Statmain example5(@RequestParam(name = "param") String param) {
+    public Statmain statlocation(@RequestParam(name = "param") String param) {
         statlocation.get_StatFiltriLocation(param, nuovo);
         return statlocation.risultato();
     }
 
     @GetMapping("/statcountry")
-    public Statmain example6(@RequestParam(name = "param") String param) {
+    public Statmain statcountry(@RequestParam(name = "param") String param) {
         statcountry.get_StatFiltriCountry(param, nuovo);
         return statcountry.risultato();
     }
 
     @GetMapping("/statora")
-    public Statmain example7(@RequestParam(name = "param") String param) {
+    public Statmain statora(@RequestParam(name = "param") String param) {
         statora.get_StatFiltriOra(param, nuovo);
         return statora.risultato();
     }
