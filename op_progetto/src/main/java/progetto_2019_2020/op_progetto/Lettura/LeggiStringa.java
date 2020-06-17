@@ -8,20 +8,21 @@ package progetto_2019_2020.op_progetto.Lettura;
 import java.io.*;
 
 public class LeggiStringa {
-    File file;
-    FileReader read;
-    InputStream in;
-    InputStreamReader inR;
-    BufferedReader buf;
-    String data = "";
-    String line = "";
-
+    protected File file;
+    protected FileReader read;
+    protected InputStream in;
+    protected InputStreamReader inR;
+    protected BufferedReader buf;
+    protected String data = "";
+    protected String line = "";
 
     /**
-     * Impostata cosi per chiamata quando si deve leggere dei flussi di dati dentro uno file e lo mettro dentro una Stringa
+     * Impostata cosi per chiamata quando si deve leggere dei flussi di dati dentro
+     * uno file e lo mettro dentro una Stringa
+     * 
      * @return data
      */
-    public String string_letta() {
+    protected String string_letta() {
         try {
             while ((line = buf.readLine()) != null) {
                 data += line;

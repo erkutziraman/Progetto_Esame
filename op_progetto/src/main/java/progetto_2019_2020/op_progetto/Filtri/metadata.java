@@ -12,10 +12,10 @@ import progetto_2019_2020.op_progetto.Preleva_Informazioni.TweetIncludes;
 import progetto_2019_2020.op_progetto.Preleva_Informazioni.TweetMetadata;
 
 public class metadata {
-    Vector<TweetMetadata> tweetmetadata = new Vector<TweetMetadata>();
-    GetLabs lab = new GetLabs();
-    Vector<Tweet> str;
-    Vector<TweetIncludes> str2;
+    private Vector<TweetMetadata> tweetmetadata = new Vector<TweetMetadata>();
+    private GetLabs lab = new GetLabs();
+   private Vector<Tweet> str;
+    private Vector<TweetIncludes> str2;
     
 
 /**

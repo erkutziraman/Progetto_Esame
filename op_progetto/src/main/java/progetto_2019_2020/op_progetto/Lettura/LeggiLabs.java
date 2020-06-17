@@ -20,9 +20,9 @@ import progetto_2019_2020.op_progetto.Conn_Server.ConnessioneIds;
 import progetto_2019_2020.op_progetto.Preleva_Informazioni.*;
 
 public class LeggiLabs extends LeggiStringa {
-    HashSet<String> mtr2 = new HashSet<String>();
-    ConnessioneIds connessione = new ConnessioneIds();
-    String a = "";
+    private HashSet<String> mtr2 = new HashSet<String>();
+    private ConnessioneIds connessione = new ConnessioneIds();
+    private String a = "";
 
     /**
      * metodo impostata per gestire il meccanismo di lettura con diverse chiamate

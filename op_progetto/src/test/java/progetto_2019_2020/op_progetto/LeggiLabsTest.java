@@ -12,8 +12,8 @@ import progetto_2019_2020.op_progetto.Lettura.LeggifileJSON;
 public class LeggiLabsTest extends DemoApplicationTests {
     LeggiLabs test_labs=null;
     LeggifileJSON test_json=null;
-    String a;
-    String b;
+    private String a;
+    private String b;
     @BeforeEach
     void setUP() throws Exception{
         test_labs.LetturaLabs();

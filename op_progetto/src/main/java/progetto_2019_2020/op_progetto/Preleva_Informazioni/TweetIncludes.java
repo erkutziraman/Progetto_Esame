@@ -6,9 +6,9 @@
 package progetto_2019_2020.op_progetto.Preleva_Informazioni;
 
 public class TweetIncludes {
-    String country;
-    String id;
-    String location;
+   private String country;
+    private String id;
+   private  String location;
 
     public TweetIncludes(String country, String id, String location) {
         this.country = country;

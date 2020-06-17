@@ -9,8 +9,8 @@ import java.util.Vector;
 import progetto_2019_2020.op_progetto.Preleva_Informazioni.TweetMetadata;
 
 public class FiltriOra {
-    int c;
-    Vector<TweetMetadata> tweet_time=new Vector<TweetMetadata>();
+    private int c;
+   private Vector<TweetMetadata> tweet_time=new Vector<TweetMetadata>();
 
  /**
      * meccanismo For che seleziona i tweet con le Ore identiche

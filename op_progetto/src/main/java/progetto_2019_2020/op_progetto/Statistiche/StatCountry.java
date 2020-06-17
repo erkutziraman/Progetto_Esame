@@ -5,8 +5,8 @@ import progetto_2019_2020.op_progetto.Preleva_Informazioni.TweetMetadata;
 
 public class StatCountry {
 
-    int b;
-    String c = "";
+   private int b;
+   //protected String c = "";
 
     public void get_StatFiltriCountry(String a, Vector<TweetMetadata> s) {
 

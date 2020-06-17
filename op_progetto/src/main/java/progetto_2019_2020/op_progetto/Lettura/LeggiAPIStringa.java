@@ -8,9 +8,9 @@ import java.io.*;
 import progetto_2019_2020.op_progetto.Conn_Server.ConnessioneSearch;
 
 public class LeggiAPIStringa extends LeggiStringa {
-    String a = "";
-    String url = "";
-    int i = 0;
+    private String a = "";
+    private String url = "";
+    private int i = 0;
 
     /**
      * gestione del meccanismo di lettura con diverse chiamate
@@ -23,7 +23,7 @@ public class LeggiAPIStringa extends LeggiStringa {
      * 
      * @return a nei due casi
      */
-    public String leggi() {
+     public String leggi() {
         boolean validazione = false;
         ConnessioneSearch connessione = new ConnessioneSearch();
 
@@ -76,7 +76,7 @@ public class LeggiAPIStringa extends LeggiStringa {
      * 
      * @return data
      */
-    public String leggi_virgola() {
+    private String leggi_virgola() {
         try {
             while ((line = buf.readLine()) != null) {
                 data += line + ",";

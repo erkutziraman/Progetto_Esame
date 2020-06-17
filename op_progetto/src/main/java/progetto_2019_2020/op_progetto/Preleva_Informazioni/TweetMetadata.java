@@ -6,11 +6,11 @@
 package progetto_2019_2020.op_progetto.Preleva_Informazioni;
 
 public class TweetMetadata {
-    String created_at;
-    String text;
-    String place_id;
-    String country;
-    String location;
+   private String created_at;
+   private String text;
+   private String place_id;
+    private String country;
+    private String location;
 
     public TweetMetadata() {
     }

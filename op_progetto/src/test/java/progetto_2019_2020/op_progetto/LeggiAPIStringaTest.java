@@ -12,8 +12,8 @@ import progetto_2019_2020.op_progetto.Lettura.LeggifileJSON;
 public class LeggiAPIStringaTest extends DemoApplicationTests{
     LeggiAPIStringa test_str=null;
     LeggifileJSON test_file=null;
-    String a;
-    String b;
+   private String a;
+    private String b;
     @BeforeEach
     void setUP() throws Exception{
         test_str= new LeggiAPIStringa();

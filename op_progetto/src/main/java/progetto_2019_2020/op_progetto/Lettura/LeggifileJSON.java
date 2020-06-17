@@ -9,7 +9,7 @@ package progetto_2019_2020.op_progetto.Lettura;
 import java.io.*;
 
 public class LeggifileJSON extends LeggiStringa {
-    String api;
+    private String api;
 
     public LeggifileJSON() {
         api = "twitter1.json";

@@ -14,12 +14,12 @@ import org.json.simple.JSONArray;
 
 public class GetId {
 
-    protected LeggiAPIStringa bb = new LeggiAPIStringa();
-    protected HashSet<String> mtr = new HashSet<String>();
-    protected JSONParser parser = new JSONParser();
-    protected JSONArray obj = null;
-    protected JSONObject secondo = null;
-    protected JSONArray jsonarr_1 = null;
+    private LeggiAPIStringa bb = new LeggiAPIStringa();
+    private HashSet<String> mtr = new HashSet<String>();
+    private JSONParser parser = new JSONParser();
+    private JSONArray obj = null;
+    private JSONObject secondo = null;
+    private JSONArray jsonarr_1 = null;
 
     /**
      * metodo impostata per prelevare gli Id dei tweet per poter farlo bisogno avere

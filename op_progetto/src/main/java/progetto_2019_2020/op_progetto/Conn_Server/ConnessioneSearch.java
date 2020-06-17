@@ -6,7 +6,7 @@
 package progetto_2019_2020.op_progetto.Conn_Server;
 
 public class ConnessioneSearch extends ConnessioneAPI {
-   String ricerche_tweet[] = { "Love", "Life", "Sunrise", "Food", "Restaurant", "Discovery", "News", "tbt", "univpm",
+  private String ricerche_tweet[] = { "Love", "Life", "Sunrise", "Food", "Restaurant", "Discovery", "News", "tbt", "univpm",
          "France", "Italy", "Holland", "Tourism", "Travel", "Rome", "Portugal", "England", "Iceland", "China",
          "Poland" };
 

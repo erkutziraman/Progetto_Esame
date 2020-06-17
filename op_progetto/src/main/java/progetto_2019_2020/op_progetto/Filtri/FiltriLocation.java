@@ -9,7 +9,7 @@ import java.util.Vector;
 import progetto_2019_2020.op_progetto.Preleva_Informazioni.TweetMetadata;
 
 public class FiltriLocation {
-   Vector<TweetMetadata> tweet_location=new Vector<TweetMetadata>();
+  private Vector<TweetMetadata> tweet_location=new Vector<TweetMetadata>();
 
     /**
      * meccanismo For che seleziona i tweet con location identiche 

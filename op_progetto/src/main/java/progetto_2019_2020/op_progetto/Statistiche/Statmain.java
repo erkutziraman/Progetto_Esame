@@ -2,8 +2,8 @@ package progetto_2019_2020.op_progetto.Statistiche;
 
 
 public class Statmain {
-    String description;
-    int risultato;
+    private String description;
+    private int risultato;
 
 public Statmain(){}
 

@@ -9,7 +9,7 @@ import progetto_2019_2020.op_progetto.Preleva_Informazioni.TweetMetadata;
 
 public class FiltriCountry {
 
-    Vector<TweetMetadata> tweet_Country=new Vector<TweetMetadata>();
+   private Vector<TweetMetadata> tweet_Country=new Vector<TweetMetadata>();
 
     /**
      * meccanismo For che seleziona i tweet i paesi identici 

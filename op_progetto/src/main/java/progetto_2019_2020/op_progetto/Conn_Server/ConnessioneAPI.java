@@ -11,11 +11,11 @@ import java.net.*;
 import java.io.*;
 
 public class ConnessioneAPI {
-    URLConnection connessione;
+    private URLConnection connessione;
     protected String url;
     protected String url_2;
-    boolean valido = false;
-    int i = 0;
+    private boolean valido = false;
+    protected int i = 0;
 
     public ConnessioneAPI() {
         url = "https://wd4hfxnxxa.execute-api.us-east-2.amazonaws.com/dev/api/1.1/search/tweets.json";

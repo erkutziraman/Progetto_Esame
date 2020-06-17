@@ -19,10 +19,10 @@ import progetto_2019_2020.op_progetto.Filtri.*;
 
 @RestController
 public class controller {
-    Vector<TweetMetadata> nuovo = new Vector<TweetMetadata>();
-    StatLocation statlocation = new StatLocation();
-    StatCountry statcountry = new StatCountry();
-    StatOra statora = new StatOra();
+    private Vector<TweetMetadata> nuovo = new Vector<TweetMetadata>();
+   private StatLocation statlocation = new StatLocation();
+    private StatCountry statcountry = new StatCountry();
+    private StatOra statora = new StatOra();
 
     @GetMapping("/connessione")
     public String esempio_2() {

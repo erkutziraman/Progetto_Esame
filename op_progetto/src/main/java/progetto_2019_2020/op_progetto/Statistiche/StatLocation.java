@@ -5,8 +5,8 @@ import java.util.Vector;
 import progetto_2019_2020.op_progetto.Preleva_Informazioni.TweetMetadata;
 
 public class StatLocation {
-   int b;
-   String c = "";
+   private int b;
+   //String c = "";
 
     public void get_StatFiltriLocation(String a,Vector<TweetMetadata> s){
     int t = 0 ;

@@ -17,13 +17,13 @@ import org.json.simple.JSONArray;
 
 public class GetLabs {
     protected LeggiLabs Labs = new LeggiLabs();
-    protected Vector<Tweet> tweet = new Vector<Tweet>();
-    public Vector<TweetIncludes> tweetincludes = new Vector<TweetIncludes>();
-    protected JSONParser parser = new JSONParser();
-    protected JSONObject obj = null;
-    protected JSONArray data = null;
-    protected JSONObject includes = null;
-    File file = new File("twitter2.json");
+    private Vector<Tweet> tweet = new Vector<Tweet>();
+    private Vector<TweetIncludes> tweetincludes = new Vector<TweetIncludes>();
+    private JSONParser parser = new JSONParser();
+    private JSONObject obj = null;
+    private JSONArray data = null;
+    private JSONObject includes = null;
+    private File file = new File("twitter2.json");
 
     /**
      * metodo impostato per effetuare il parsing dei dati contenuti dentro

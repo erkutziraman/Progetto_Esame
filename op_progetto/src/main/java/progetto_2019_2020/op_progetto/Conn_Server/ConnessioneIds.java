@@ -1,7 +1,7 @@
 package progetto_2019_2020.op_progetto.Conn_Server;
 
 public class ConnessioneIds extends ConnessioneAPI {
-    String url;
+    private String url;
 
     /**
      * Ad ogni ciclo che il metodo leggiLabs fa questa classe prende come parametro
