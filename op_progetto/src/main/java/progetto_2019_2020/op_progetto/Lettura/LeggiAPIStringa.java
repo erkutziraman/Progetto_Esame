@@ -1,6 +1,6 @@
 /**
  * classe impostata specialmente per chiedere la connessione al'API ma sopprattutto scrivendo i dati dentro il file twitter1
- * gestendo il fatto che se non c'è connessione 
+ * gestendo il fatto se c'è o no la connessione ad internet 
  */
 package progetto_2019_2020.op_progetto.Lettura;
 
@@ -16,7 +16,7 @@ public class LeggiAPIStringa extends LeggiStringa {
      * gestione del meccanismo di lettura con diverse chiamate
      * 
      * tutto ciò che viene raccolto dall'API viene prima registro dentro la stringa
-     * a e poi registro nel file supporto twitter1.json
+     * "a" e poi registrato nel file supporto twitter1.json
      * 
      * gestione del caso di connessione che impedisce la scrittura dentro twitter1
      * in caso di non connessione alla rete internet
@@ -71,7 +71,7 @@ public class LeggiAPIStringa extends LeggiStringa {
     }
 
     /**
-     * lettura del flux venendo dal metodo leggi agguingendo la virgola dopo ogni
+     * lettura del flux venendo dal metodo leggi, agguingendo la virgola dopo ogni
      * oggetto JSON
      * 
      * @return data

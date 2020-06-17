@@ -1,5 +1,5 @@
 /**
- * classe codificata per leggere i dati da twitter(dati venendo da labs)
+ * classe codificata per leggere i dati dal file supporto "twitter2"
  * il parsing ci permette di prelevare e inserire i dati specificati dentro gli oggetti
  * per poter essere usato meglio
  */
@@ -26,12 +26,10 @@ public class GetLabs {
     private File file = new File("twitter2.json");
 
     /**
-     * metodo impostato per effetuare il parsing dei dati contenuti dentro
-     * twitter2.json con dei metodi in riferimento alla struttura del JSON
-     * preleviamo gli informazioni specificati in realtà qui stiamo aggiornando due
-     * Vettore della classe Vector "tweetincludes" e "tweet" questa classe ci
-     * restituisce tweet, per tweetincludes avremmo bisogno del metodo
-     * getTweetincludes
+     * Questo metodo è stato impostato per effetuare il parsing dei dati contenuti dentro twitter2.json.
+     * con la libreria org.json tiriamo fuori dei campi(dati contenuti dentro twitter2) che ci servono.
+     * 
+     * qui stiamo aggiornando due Vettori della classe Vector "tweetincludes" e "tweet" 
      * 
      * @return tweet
      */

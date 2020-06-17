@@ -1,5 +1,5 @@
 /**
- * classe impostata per dare i dati che sono stati fatti filtrati sul paese specificato
+ * classe impostata per dare i dati che sono stati filtrati sul paese specificato
  */
 package progetto_2019_2020.op_progetto.Filtri;
 
@@ -12,7 +12,7 @@ public class FiltriCountry {
    private Vector<TweetMetadata> tweet_Country=new Vector<TweetMetadata>();
 
     /**
-     * meccanismo For che seleziona i tweet i paesi identici 
+     * meccanismo For che seleziona i tweet dei paesi identici 
      * @param a
      * @param c
      * @return tweet_country

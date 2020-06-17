@@ -1,5 +1,5 @@
 /**
- * classe impostata per dare i dati che sono stati fatti filtrati sulla localizzazione specificato
+ * classe impostata per dare i dati che sono stati filtrati sulla localizzazione specificata
  */
 
 package progetto_2019_2020.op_progetto.Filtri;

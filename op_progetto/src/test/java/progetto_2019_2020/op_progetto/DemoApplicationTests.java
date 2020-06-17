@@ -1,3 +1,7 @@
+/**
+ * classe tipica per impostare i test Junit
+ */
+
 package progetto_2019_2020.op_progetto;
 
 import org.junit.jupiter.api.Test;
@@ -15,7 +19,8 @@ class DemoApplicationTests {
 	void test2(){
 		LeggiLabsTest test2=new LeggiLabsTest();
 		test2.test2();
-	}
+	} 
+
 	@Test 
 	void test3(){
 		MetadataTest test3=new MetadataTest();

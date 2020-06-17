@@ -1,5 +1,9 @@
-package progetto_2019_2020.op_progetto.Statistiche;
+/**
+ * classe tipica della stuttura di un'oggetto
+ * nel nostro caso struttura del oggetto statmain
+ */
 
+package progetto_2019_2020.op_progetto.Statistiche;
 
 public class Statmain {
     private String description;

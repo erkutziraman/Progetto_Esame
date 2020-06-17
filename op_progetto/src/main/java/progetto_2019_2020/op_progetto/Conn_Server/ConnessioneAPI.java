@@ -1,6 +1,6 @@
 /**
  * Classe per fare la connessione l'API con le ricerche.
- * l'abbiamo impostata per essere chiamata effettuando le connessioni con i URL specificato cui sopra
+ * l'abbiamo impostata per essere chiamata effettuando le connessioni con i URL specificati cui sopra
  * 
  * @author ERKUT ZIRAMAN
  */
@@ -23,7 +23,7 @@ public class ConnessioneAPI {
     }
 
     /**
-     * metodo che fa la verifica della connessione al server con
+     * metodo che fa la connessione e la verifica con IO exception al server 
      * 
      * @exception IO
      * @param a

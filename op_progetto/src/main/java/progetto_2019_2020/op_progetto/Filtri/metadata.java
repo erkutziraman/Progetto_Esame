@@ -19,8 +19,10 @@ public class metadata {
     
 
 /**
- * questo metodo prene Vettori "str" e "str2" che sono stati aggiornati dentro GetLabs
- * creando un altro oggetto "tweetmetadata" con dei campi più scorriamo i due vettore e aggiorniamo i dati in maniera più pulita
+ * questo metodo prende i Vettori "str" e "str2" che sono stati aggiornati dentro GetLabs,
+ * creando un altro oggetto "tweetmetadata" con dei campi più specificati,  
+ * scorriamo i due vettore(str, str2) e aggiorniamo i dati in maniera più pulita dentro tweetmetadata
+ * 
  * @return tweetmetadata
  */
     public Vector<TweetMetadata> leggimetadata() {

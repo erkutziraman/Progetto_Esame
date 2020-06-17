@@ -17,8 +17,8 @@ public class LeggiStringa {
     protected String line = "";
 
     /**
-     * Impostata cosi per chiamata quando si deve leggere dei flussi di dati dentro
-     * uno file e lo mettro dentro una Stringa
+     * Classe Impostata cosi per poter solo essere chiamata quando si deve leggere dei flussi di dati dentro
+     * uno file e lo mette dentro una Stringa
      * 
      * @return data
      */

@@ -1,8 +1,10 @@
 /**
- * classe impostata specialmente per chiedere la connessione alla seconda API(API search) in diamo gli id raccolti 
- * dando questi Id API search ci restituisce i dati dentro "a" con i campi specificati
+ * classe impostata specialmente per chiedere la connessione alla seconda API(API search)
+ * con un vettore "mtr2" che contiene gli ID selezionati dentro GETid, effetuamo delle connessioni con questi ID
  * 
- * gestendo il fatto che se non c'è connessione 
+ * per poter avere degli informazioni con i campi specificati di ogni ID 
+ * 
+ * gestendo il fatto se c'è o no la connessione ad internet
  */
 
 package progetto_2019_2020.op_progetto.Lettura;
@@ -26,7 +28,7 @@ public class LeggiLabs extends LeggiStringa {
 
     /**
      * metodo impostata per gestire il meccanismo di lettura con diverse chiamate
-     * tutto ciò che viene raccolto dall'API search viene prima registro dentro la
+     * tutto ciò che viene raccolto dall'API search viene prima registrato dentro la
      * stringa "a" e poi registro nel file supporto twitter2.json
      * 
      * gestione del caso di connessione che impedisce la scrittura dentro twitter2

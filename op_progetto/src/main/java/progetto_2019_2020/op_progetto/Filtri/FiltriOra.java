@@ -1,5 +1,5 @@
 /**
- * classe impostata per dare i dati che sono stati fatti filtrati sull'Ora specificato
+ * classe impostata per dare i dati che sono stati filtrati sull'Ora specificato
  */
 
 package progetto_2019_2020.op_progetto.Filtri;
