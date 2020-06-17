@@ -1,5 +1,5 @@
 /**
- * Classe impostata per prelevare gli Id
+ * Classe impostata per prelevare gli Id che rappresentano i tweet
  * @return un vettore di Id della classe Vector.
  * @author Toyem Ryan
  */
@@ -21,12 +21,19 @@ public class GetId {
     protected JSONObject secondo = null;
     protected JSONArray jsonarr_1 = null;
 
+    /**
+     * metodo impostata per prelevare gli Id dei tweet per poter farlo bisogno avere
+     * una buona conoscenza della dei file JSON e sopprattutto abbiamo usufruito dei
+     * metodi di parsing della libreria org.json questo ci ritorna un hashset di ID
+     * 
+     * @return mtr
+     */
     public HashSet<String> Tweet_id() {
 
         try {
             obj = (JSONArray) parser.parse(bb.leggi());
         } catch (Exception e) {
-            System.out.println("probem de parsing");
+            System.out.println("probema di parsing");
             e.printStackTrace();
         }
         for (int i = 0; i < obj.size(); i++) {
@@ -34,23 +41,23 @@ public class GetId {
             try {
                 jsonarr_1 = (JSONArray) secondo.get("statuses");
             } catch (Exception e) {
-                System.out.println("statutes n'est pas trouver");
+                System.out.println("statutes non è stata trovata");
 
             }
             /**
-             * <strong> Ciclo For che fa la verifica di place costruisce il vettore mtr
-             * verificando se ci sono gia gli id identici dentro il vettore mtr.
+             * <strong> Ciclo For che fa la verifica dentro i tweet che sono stati parsati e
+             * preleva ID di place e lo agguinge dentro il vettore mtr </strong>
+             * 
              */
             for (int j = 0; j < jsonarr_1.size(); j++) {
                 JSONObject jsonobj_1 = (JSONObject) jsonarr_1.get(j);
                 JSONObject jsonobj_2 = (JSONObject) jsonobj_1.get("place");
-                if (jsonobj_2 != null /*&& !mtr.contains((String.valueOf(jsonobj_1.get("id"))))*/) {
+                if (jsonobj_2 != null) {
                     mtr.add(String.valueOf(jsonobj_1.get("id")));
                 }
             }
         }
-        //System.out.println("voir la classe VEttore " + mtr);
-        //System.out.println("la dimension de l'array est " + mtr.size());
+
         return mtr;
     }
 }

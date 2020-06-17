@@ -1,3 +1,7 @@
+/**
+ * Classe Main per l'avviamento del applicazione SprintBoot
+ */
+
 package progetto_2019_2020.op_progetto;
 
 import org.springframework.boot.SpringApplication;

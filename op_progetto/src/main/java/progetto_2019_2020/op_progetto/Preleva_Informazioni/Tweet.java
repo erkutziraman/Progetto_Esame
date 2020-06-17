@@ -1,3 +1,8 @@
+/**
+ * classe tipica della stuttura di un'oggetto
+ * nel nostro caso struttura del oggetto Tweet
+ */
+
 package progetto_2019_2020.op_progetto.Preleva_Informazioni;
 
 public class Tweet {
@@ -10,10 +15,13 @@ public class Tweet {
         this.text = text;
         this.place_id = place_id;
     }
-    public Tweet(){}
+
+    public Tweet() {
+    }
+
     @Override
     public String toString() {
-        return "Created_at: "+created_at +", Text: "+text+", Place_id: "+place_id ;
+        return "Created_at: " + created_at + ", Text: " + text + ", Place_id: " + place_id;
     }
 
     public String getCreated_at() {
@@ -39,5 +47,5 @@ public class Tweet {
     public void setPlace_id(String place_id) {
         this.place_id = place_id;
     }
-   
+
 }

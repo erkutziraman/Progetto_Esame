@@ -1,3 +1,7 @@
+/**
+ * Questa classe è stata impostata in questo modo nello scopo di poter ben sistemare il risultato finale metadata
+ */
+
 package progetto_2019_2020.op_progetto.Filtri;
 
 import java.util.*;
@@ -12,6 +16,13 @@ public class metadata {
     GetLabs lab = new GetLabs();
     Vector<Tweet> str;
     Vector<TweetIncludes> str2;
+    
+
+/**
+ * questo metodo prene Vettori "str" e "str2" che sono stati aggiornati dentro GetLabs
+ * creando un altro oggetto "tweetmetadata" con dei campi più scorriamo i due vettore e aggiorniamo i dati in maniera più pulita
+ * @return tweetmetadata
+ */
     public Vector<TweetMetadata> leggimetadata() {
         this.str=lab.Labs2();
         this.str2 = lab.getTweetincludes();

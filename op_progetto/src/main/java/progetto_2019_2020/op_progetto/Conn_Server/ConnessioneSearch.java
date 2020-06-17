@@ -1,5 +1,6 @@
 /**
- * classe che da gli informazioni sulla ricerca dal server 
+ * Per effeture le richieste abbiamo definito per default le parole chiave che si devono inserire per avere i risultati
+ * è come se facessi delle ricerche con uno Hashtag (#) dentro twitter 
  */
 
 package progetto_2019_2020.op_progetto.Conn_Server;

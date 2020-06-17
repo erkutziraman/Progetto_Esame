@@ -1,18 +1,27 @@
+/**
+ * classe tipica della stuttura di un'oggetto
+ * nel nostro caso struttura del oggetto TweetIncludes
+ */
+
 package progetto_2019_2020.op_progetto.Preleva_Informazioni;
 
 public class TweetIncludes {
     String country;
     String id;
     String location;
+
     public TweetIncludes(String country, String id, String location) {
         this.country = country;
         this.id = id;
         this.location = location;
     }
-    public TweetIncludes(){}
+
+    public TweetIncludes() {
+    }
+
     @Override
     public String toString() {
-        return "Country: "+country +", Id: "+id+", Location: "+location ;
+        return "Country: " + country + ", Id: " + id + ", Location: " + location;
     }
 
     public String getCountry() {

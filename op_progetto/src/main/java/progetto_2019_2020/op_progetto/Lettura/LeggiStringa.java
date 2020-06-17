@@ -16,6 +16,11 @@ public class LeggiStringa {
     String data = "";
     String line = "";
 
+
+    /**
+     * Impostata cosi per chiamata quando si deve leggere dei flussi di dati dentro uno file e lo mettro dentro una Stringa
+     * @return data
+     */
     public String string_letta() {
         try {
             while ((line = buf.readLine()) != null) {

@@ -1,3 +1,8 @@
+/**
+ * classe tipica della stuttura di un'oggetto
+ * nel nostro caso struttura del oggetto TweetMetadata
+ */
+
 package progetto_2019_2020.op_progetto.Preleva_Informazioni;
 
 public class TweetMetadata {
@@ -6,7 +11,10 @@ public class TweetMetadata {
     String place_id;
     String country;
     String location;
-    public TweetMetadata(){}
+
+    public TweetMetadata() {
+    }
+
     public TweetMetadata(String created_at, String text, String place_id, String country, String location) {
         this.created_at = created_at;
         this.text = text;
@@ -14,7 +22,6 @@ public class TweetMetadata {
         this.country = country;
         this.location = location;
     }
-  //  public TweetMetadata(){}
 
     public String getCreated_at() {
         return created_at;
@@ -23,6 +30,7 @@ public class TweetMetadata {
     public void setCreated_at(String created_at) {
         this.created_at = created_at;
     }
+
     public String getText() {
         return text;
     }
@@ -54,5 +62,5 @@ public class TweetMetadata {
     public void setLocation(String location) {
         this.location = location;
     }
-    
+
 }
