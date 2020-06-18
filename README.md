@@ -17,7 +17,8 @@ La nostra applicazione permette di richiedere mediante API REST (GET) con rotte 
 
 Quest'applicazione è stata codificata per essere lanciata quando c'è la connessione alla rete internet **([Modalità Online](https://github.com/erkutziraman/Progetto_Esame#1--modalit%C3%A0-online))** ma anche quando non si può connettersi alla rete **([Modalità Offline](https://github.com/erkutziraman/Progetto_Esame#2--modalit%C3%A0-offline))**; 
 
-> gli informazione dentro la parte [Modalità Online](https://github.com/erkutziraman/Progetto_Esame#1--modalit%C3%A0-online) e [Modalità Offline](https://github.com/erkutziraman/Progetto_Esame#2--modalit%C3%A0-offline)  sono molto importante e contengono richieste obbligatorie all'avvio dell'applicazione per poter utilizzare le funzionalità. 
+> gli informazione dentro la parte [Modalità Online](https://github.com/erkutziraman/Progetto_Esame#1--modalit%C3%A0-online) e [Modalità Offline](https://github.com/erkutziraman/Progetto_Esame#2--modalit%C3%A0-offline)  sono molto importante e contengono richieste obbligatorie all'avvio dell'applicazione per poter utilizzare le funzionalità.
+
 
  ### Lanciare l'applicazione
  **Compilando tutti i file è stato prodotto un file eseguibile** `.jar` 
@@ -60,6 +61,9 @@ Tramite un software di API testing (nel nostro caso il software **Postman**), si
 
 > GET* : vuol dire che la comanda deve essere fatta all'inizio quando si ha appena avviato l''applicazione.
 > Place_id : corrisponde al luogo che fa riferimento il tweet dentro il campo *location*.
+
+
+<img src="https://github.com/erkutziraman/Progetto_Esame/blob/master/op_progetto/UML/UML%20casi%20d'uso.PNG"/>
 
 ### Particolarità con il Protocollo HTTP
 Con le modalità di richieste REST API si può dopo aver lanciato l'applicazione, effettuare i comandi GET con l'applicazione Postman oppure fare le richieste su **qualsiasi browser** (firefox, Google chrome, Opera ecc),
@@ -108,6 +112,49 @@ Questa comanda ci aiuta a prelevare i dati che sono **stati salvati** dentro il 
 
 
 # Sviluppo 
+
+### Packages
+
+
+<img src="https://github.com/erkutziraman/Progetto_Esame/blob/master/op_progetto/UML/UML%20pacchetti.PNG"/>
+
+
+
+**- Package Filtri**
+
+
+<img src="https://github.com/erkutziraman/Progetto_Esame/blob/master/op_progetto/UML/UML%20classe%20filtri.png"/>
+
+
+**- Package Lettura**
+
+
+<img src="https://github.com/erkutziraman/Progetto_Esame/blob/master/op_progetto/UML/UML%20classe%20lettura.png"/>
+
+
+**- Package Controller**
+
+
+<img src="https://github.com/erkutziraman/Progetto_Esame/blob/master/op_progetto/UML/UML%20classe%20controller.jpg"/>
+
+
+**- Package Preleva_Informazioni**
+
+
+<img src="https://github.com/erkutziraman/Progetto_Esame/blob/master/op_progetto/UML/UML%20classe%20Preleva_informazioni.png"/>
+
+
+**- Package ConnServer**
+
+
+<img src="https://github.com/erkutziraman/Progetto_Esame/blob/master/op_progetto/UML/UML%20classe%20connessione.png"/>
+
+
+**- Package Statistiche**
+
+
+<img src="https://github.com/erkutziraman/Progetto_Esame/blob/master/op_progetto/UML/UML%20classe%20statistiche.png"/>
+
 
 ## Software Utilizzati
 * [Visual Studio Code](https://code.visualstudio.com/) - ambiente di sviluppo integrato
