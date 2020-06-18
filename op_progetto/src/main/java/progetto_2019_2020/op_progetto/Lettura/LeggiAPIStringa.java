@@ -1,19 +1,21 @@
-/**
- * classe impostata specialmente per chiedere la connessione al'API ma sopprattutto scrivendo i dati dentro il file twitter1
- * gestendo il fatto se c'è o no la connessione ad internet 
- */
+
 package progetto_2019_2020.op_progetto.Lettura;
 
 import java.io.*;
 import progetto_2019_2020.op_progetto.Conn_Server.ConnessioneSearch;
 
+/**
+ * La classe impostata specialmente per chiedere la connessione al'API ma
+ * sopprattutto scrivendo i dati dentro il file twitter1 gestendo il fatto se
+ * c'è o no la connessione ad internet
+ */
 public class LeggiAPIStringa extends LeggiStringa {
     private String a = "";
     private String url = "";
     private int i = 0;
 
     /**
-     * gestione del meccanismo di lettura con diverse chiamate
+     * La gestione del meccanismo di lettura con diverse chiamate
      * 
      * tutto ciò che viene raccolto dall'API viene prima registro dentro la stringa
      * "a" e poi registrato nel file supporto twitter1.json
@@ -23,7 +25,7 @@ public class LeggiAPIStringa extends LeggiStringa {
      * 
      * @return a nei due casi
      */
-     public String leggi() {
+    public String leggi() {
         boolean validazione = false;
         ConnessioneSearch connessione = new ConnessioneSearch();
 
@@ -71,7 +73,7 @@ public class LeggiAPIStringa extends LeggiStringa {
     }
 
     /**
-     * lettura del flux venendo dal metodo leggi, agguingendo la virgola dopo ogni
+     * lettura del flusso venendo dal metodo leggi, agguingendo la virgola dopo ogni
      * oggetto JSON
      * 
      * @return data

@@ -1,11 +1,3 @@
-/**
- * classe impostata specialmente per chiedere la connessione alla seconda API(API search)
- * con un vettore "mtr2" che contiene gli ID selezionati dentro GETid, effetuamo delle connessioni con questi ID
- * 
- * per poter avere degli informazioni con i campi specificati di ogni ID 
- * 
- * gestendo il fatto se c'è o no la connessione ad internet
- */
 
 package progetto_2019_2020.op_progetto.Lettura;
 
@@ -21,18 +13,27 @@ import progetto_2019_2020.op_progetto.Conn_Server.ConnessioneIds;
 
 import progetto_2019_2020.op_progetto.Preleva_Informazioni.*;
 
+/**
+ * classe impostata per chiedere la connessione alla seconda API(API search) con
+ * un vettore "mtr2" che contiene gli ID selezionati, effetuiamo delle
+ * connessioni con questi ID
+ * 
+ * per poter avere le informazioni
+ * 
+ * gestendo il fatto se c'è o no la connessione ad internet
+ */
 public class LeggiLabs extends LeggiStringa {
     private HashSet<String> mtr2 = new HashSet<String>();
     private ConnessioneIds connessione = new ConnessioneIds();
     private String a = "";
 
     /**
-     * metodo impostata per gestire il meccanismo di lettura con diverse chiamate
+     * metodo impostato per gestire il meccanismo di lettura con diverse chiamate
      * tutto ciò che viene raccolto dall'API search viene prima registrato dentro la
-     * stringa "a" e poi registro nel file supporto twitter2.json
+     * stringa "a" e poi registro nel file supporto twitter2.json,
      * 
-     * gestione del caso di connessione che impedisce la scrittura dentro twitter2
-     * in caso di non connessione alla rete internet
+     * impedisce la scrittura dentro twitter2 nel caso di non connessione alla rete
+     * internet
      * 
      * @return "a" nei due casi
      */
@@ -73,10 +74,16 @@ public class LeggiLabs extends LeggiStringa {
 
     }
 
+    /**
+     * @return a
+     */
     public String getA() {
         return a;
     }
 
+    /**
+     * @param a
+     */
     public void setA(String a) {
         this.a = a;
     }

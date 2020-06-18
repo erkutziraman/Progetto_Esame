@@ -1,8 +1,3 @@
-/**
- * classe codificata per leggere i dati dal file supporto "twitter2"
- * il parsing ci permette di prelevare e inserire i dati specificati dentro gli oggetti
- * per poter essere usato meglio
- */
 
 package progetto_2019_2020.op_progetto.Preleva_Informazioni;
 
@@ -15,6 +10,11 @@ import progetto_2019_2020.op_progetto.Lettura.*;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONArray;
 
+/**
+ * La classe codificata per leggere i dati dal file supporto "twitter2" il
+ * parsing ci permette di prelevare e inserire i dati specificati dentro gli
+ * oggetti per poter essere usato meglio
+ */
 public class GetLabs {
     protected LeggiLabs Labs = new LeggiLabs();
     private Vector<Tweet> tweet = new Vector<Tweet>();
@@ -26,10 +26,12 @@ public class GetLabs {
     private File file = new File("twitter2.json");
 
     /**
-     * Questo metodo è stato impostato per effetuare il parsing dei dati contenuti dentro twitter2.json.
-     * con la libreria org.json tiriamo fuori dei campi(dati contenuti dentro twitter2) che ci servono.
+     * Questo metodo è stato impostato per effetuare il parsing dei dati contenuti
+     * dentro twitter2.json. con la libreria org.json tiriamo fuori dei campi(dati
+     * contenuti dentro twitter2) che ci servono.
      * 
-     * qui stiamo aggiornando due Vettori della classe Vector "tweetincludes" e "tweet" 
+     * qui stiamo aggiornando due Vettori della classe Vector "tweetincludes" e
+     * "tweet"
      * 
      * @return tweet
      */
@@ -78,14 +80,23 @@ public class GetLabs {
         return tweetincludes;
     }
 
+    /**
+     * @param tweetincludes
+     */
     public void setTweetincludes(Vector<TweetIncludes> tweetincludes) {
         this.tweetincludes = tweetincludes;
     }
 
+    /**
+     * @return tweet
+     */
     public Vector<Tweet> getTweet() {
         return tweet;
     }
 
+    /**
+     * @param tweet
+     */
     public void setTweet(Vector<Tweet> tweet) {
         this.tweet = tweet;
     }

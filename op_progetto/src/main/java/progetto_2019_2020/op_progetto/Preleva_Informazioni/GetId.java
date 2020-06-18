@@ -1,7 +1,3 @@
-/**
- * Classe impostata per prelevare gli Id che rappresentano i tweet contenente i valori di "place" non nullo
- * @author Toyem Ryan
- */
 
 package progetto_2019_2020.op_progetto.Preleva_Informazioni;
 
@@ -11,6 +7,12 @@ import progetto_2019_2020.op_progetto.Lettura.*;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONArray;
 
+/**
+ * La classe è stata impostata per prelevare gli Id che rappresentano i tweet
+ * contenente i valori di "place" non nullo
+ * 
+ * @author Toyem Ryan
+ */
 public class GetId {
 
     private LeggiAPIStringa bb = new LeggiAPIStringa();
@@ -21,10 +23,11 @@ public class GetId {
     private JSONArray jsonarr_1 = null;
 
     /**
-     * Metodo impostato per prelevare gli Id che rappresentano i tweet contenente i valori di "place" non nullo.
-     * per poter farlo bisogna avere una buona conoscenza della struttura dei file JSON
-     * e sopprattutto abbiamo usufruito dei
-     * metodi di parsing della libreria "org.json" questo ci ritorna un hashset di ID
+     * Metodo impostato per prelevare gli Id che rappresentano i tweet contenente i
+     * valori di "place" non nullo. per poter farlo bisogna avere una buona
+     * conoscenza della struttura dei file JSON e sopprattutto abbiamo usufruito dei
+     * metodi di parsing della libreria "org.json" questo ci ritorna un hashset di
+     * ID
      * 
      * @return mtr
      */
@@ -45,8 +48,8 @@ public class GetId {
 
             }
             /**
-             * <strong>Ciclo For</strong> che fa la verifica dentro i tweet che sono stati parsati e
-             * preleva gli ID di place e lo agguinge dentro il vettore mtr
+             * <strong>Ciclo For</strong> che fa la verifica dentro i tweet che sono stati
+             * parsati e preleva gli ID di place e lo agguinge dentro il vettore mtr
              */
             for (int j = 0; j < jsonarr_1.size(); j++) {
                 JSONObject jsonobj_1 = (JSONObject) jsonarr_1.get(j);

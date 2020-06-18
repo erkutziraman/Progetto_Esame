@@ -1,14 +1,13 @@
 package progetto_2019_2020.op_progetto.Conn_Server;
 
+/**
+ * Classe che fa la connessione con gli id a Labs.
+ */
 public class ConnessioneIds extends ConnessioneAPI {
     private String url;
 
     /**
-     * Ad ogni ciclo che il metodo leggiLabs fa , 
-     * questa classe prende come parametro un Id e 
-     * lo agguinge dentro url_2(creata nella super classe) 
-     * lo agguinge dentro url con una stringa particolata(stiamdo costituendo url della ricerca labs) 
-     * l'ultima comanda che si fa dentro url_2 serve a mettere la virgola dietro ogni ID necessaria per effetuare le richieste
+     * Prepara url Twitter Labs inserendo gli id per la connessione.
      * 
      * @param id
      */
@@ -19,12 +18,17 @@ public class ConnessioneIds extends ConnessioneAPI {
     }
 
     /**
-     * @return url
+     * @return Ci restituisce url per la connessione a Labs.
      */
     public String getUrl() {
         return url;
     }
 
+    /**
+     * Imposta url per la connessione a Labs.
+     * 
+     * @param url
+     */
     public void setUrl(String url) {
         this.url = url;
     }

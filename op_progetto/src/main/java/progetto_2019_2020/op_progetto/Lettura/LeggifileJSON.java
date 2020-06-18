@@ -1,13 +1,13 @@
-/**
- * Tutti i dati essendo stati registrati dentro twitter1.json dopo la prima connessione al API
- * questa classe effetua la lettura dal file twitter1 
- * @author TOYEM RYAN
- */
-
 package progetto_2019_2020.op_progetto.Lettura;
 
 import java.io.*;
 
+/**
+ * Tutti i dati essendo stati registrati dentro twitter1.json dopo la prima
+ * connessione al API questa classe effetua la lettura dal file twitter1
+ * 
+ * @author TOYEM RYAN
+ */
 public class LeggifileJSON extends LeggiStringa {
     private String api;
 
@@ -35,10 +35,16 @@ public class LeggifileJSON extends LeggiStringa {
         return data;
     }
 
+    /**
+     * @return api
+     */
     public String getApi() {
         return api;
     }
 
+    /**
+     * @param api
+     */
     public void setApi(String api) {
         this.api = api;
     }

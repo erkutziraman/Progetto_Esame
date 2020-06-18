@@ -1,7 +1,3 @@
-/**
- * Questa classe è stata impostata in questo modo nello scopo di poter ben sistemare il risultato finale metadata
- */
-
 package progetto_2019_2020.op_progetto.Filtri;
 
 import java.util.*;
@@ -11,22 +7,26 @@ import progetto_2019_2020.op_progetto.Preleva_Informazioni.Tweet;
 import progetto_2019_2020.op_progetto.Preleva_Informazioni.TweetIncludes;
 import progetto_2019_2020.op_progetto.Preleva_Informazioni.TweetMetadata;
 
+/**
+ * Questa classe è stata impostata in questo modo nello scopo di poter ben
+ * sistemare il risultato finale metadata
+ */
 public class metadata {
     private Vector<TweetMetadata> tweetmetadata = new Vector<TweetMetadata>();
     private GetLabs lab = new GetLabs();
-   private Vector<Tweet> str;
+    private Vector<Tweet> str;
     private Vector<TweetIncludes> str2;
-    
 
-/**
- * questo metodo prende i Vettori "str" e "str2" che sono stati aggiornati dentro GetLabs,
- * creando un altro oggetto "tweetmetadata" con dei campi più specificati,  
- * scorriamo i due vettore(str, str2) e aggiorniamo i dati in maniera più pulita dentro tweetmetadata
- * 
- * @return tweetmetadata
- */
+    /**
+     * Questo metodo prende i Vettori "str" e "str2" che sono stati aggiornati
+     * dentro GetLabs, creando un altro oggetto "tweetmetadata" con dei campi più
+     * specificati, scorriamo i due vettore(str, str2) e aggiorniamo i dati in
+     * maniera più pulita dentro tweetmetadata
+     * 
+     * @return tweetmetadata
+     */
     public Vector<TweetMetadata> leggimetadata() {
-        this.str=lab.Labs2();
+        this.str = lab.Labs2();
         this.str2 = lab.getTweetincludes();
         String created_at = "";
         String text = "";
@@ -49,21 +49,38 @@ public class metadata {
         return tweetmetadata;
     }
 
+    /**
+     * 
+     * @return Restituisce la struttura json creato per metadata.
+     */
     public Vector<TweetMetadata> getTweetmetadata() {
         return tweetmetadata;
     }
 
+    /**
+     * Imposta la struttura json creato per metadata.
+     * 
+     * @param tweetmetadata
+     */
     public void setTweetmetadata(Vector<TweetMetadata> tweetmetadata) {
         this.tweetmetadata = tweetmetadata;
     }
 
+    /**
+     * 
+     * @return Restituisce la struttura Tweet.
+     */
     public Vector<Tweet> getStr() {
         return str;
     }
 
+    /**
+     * Imposta la struttura Tweet.
+     * 
+     * @param str
+     */
     public void setStr(Vector<Tweet> str) {
         this.str = str;
     }
-
 
 }

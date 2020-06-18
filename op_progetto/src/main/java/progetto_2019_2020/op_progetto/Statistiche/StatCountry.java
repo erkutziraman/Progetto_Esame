@@ -1,20 +1,21 @@
-/**
- * classe impostata per dare la statistica del paese selezionato
- */
 
 package progetto_2019_2020.op_progetto.Statistiche;
 
 import java.util.Vector;
 import progetto_2019_2020.op_progetto.Preleva_Informazioni.TweetMetadata;
 
+/**
+ * La classe impostata per dare la statistica del paese selezionato.
+ */
 public class StatCountry {
 
-   private int b;
+    private int b;
 
-     /**
-     * meccanismo For che incrementa "t", ad ogni validazione della condizione
-     * e momerizza il numero finale dentro "b"
-     * la condizione in questo caso è l'ugualianza del nome del paese
+    /**
+     * meccanismo For che incrementa "t", ad ogni validazione della condizione e
+     * momerizza il numero finale dentro "b" la condizione in questo caso è
+     * l'ugualianza del nome del paese
+     * 
      * @param a
      * @param s
      */
@@ -28,10 +29,12 @@ public class StatCountry {
             }
         }
     }
-/**
- * Risultato finale nel tipo statmain impostata sotto forma di stampa
- * @return statmain
- */
+
+    /**
+     * Risultato finale nel tipo statmain impostata sotto forma di stampa
+     * 
+     * @return statmain
+     */
     public Statmain risultato() {
         String description = "Questa statistica ci restituisce il numero di tweet che sono stati postati nel paese selezionato";
         int risultato = b;
