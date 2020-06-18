@@ -51,7 +51,14 @@ public class controller {
 
         return new FiltriOra().get_tweet_time(param, nuovo);
     }
-
+    @GetMapping("/ora_sup")
+    public Vector<TweetMetadata> ora_sup(@RequestParam(name = "param") String param) {
+        return new FiltriOra().get_tweet_greater(param, nuovo);
+    }
+    @GetMapping("/ora_inf")
+    public Vector<TweetMetadata> ora_inf(@RequestParam(name = "param") String param) {
+        return new FiltriOra().get_tweet_smaller(param, nuovo);
+    }
     @GetMapping("/statlocation")
     public Statmain statlocation(@RequestParam(name = "param") String param) {
         statlocation.get_StatFiltriLocation(param, nuovo);

@@ -29,6 +29,32 @@ public class FiltriOra {
         }
         return tweet_time;
     }
+    public Vector<TweetMetadata> get_tweet_greater(String a,Vector<TweetMetadata> t){
+        int x=Integer.parseInt(a);
+        int y;
+        for(int i=0;i<t.size();i++){
+            y=Integer.parseInt(t.get(i).getCreated_at().substring(11, 13));
+            if(x<=y){
+                TweetMetadata data= t.get(i);
+                tweet_time.add(data);
+                c++;
+            }
+        }
+        return tweet_time;
+    }
+    public Vector<TweetMetadata> get_tweet_smaller(String a,Vector<TweetMetadata> t){
+        int x=Integer.parseInt(a);
+        int y;
+        for(int i=0;i<t.size();i++){
+            y=Integer.parseInt(t.get(i).getCreated_at().substring(11, 13));
+            if(x>y){
+                TweetMetadata data= t.get(i);
+                tweet_time.add(data);
+                c++;
+            }
+        }
+        return tweet_time;
+    }
 
     public int getc (){
         return c;
