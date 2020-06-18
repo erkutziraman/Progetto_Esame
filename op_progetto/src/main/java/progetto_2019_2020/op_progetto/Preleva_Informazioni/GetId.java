@@ -41,7 +41,7 @@ public class GetId {
             try {
                 jsonarr_1 = (JSONArray) secondo.get("statuses");
             } catch (Exception e) {
-                System.out.println("statutes non è stata trovata");
+                System.out.println("statutes non è stato trovato");
 
             }
             /**
