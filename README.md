@@ -135,7 +135,7 @@ Questa comanda ci aiuta a prelevare i dati che sono **stati salvati** dentro il 
 **- Package Controller**
 
 
-<img src="https://github.com/erkutziraman/Progetto_Esame/blob/master/op_progetto/UML/UML%20classe%20controller.jpg"/>
+<img src="https://github.com/erkutziraman/Progetto_Esame/blob/master/op_progetto/UML/UML%20classe%20controller.png"/>
 
 
 **- Package Preleva_Informazioni**
